@@ -47,19 +47,19 @@
                 <?php 
                     $json_source = file_get_contents("../$u/conf.json");
                     $json_data = json_decode($json_source);
-                    echo $json_data->prenom;
+                    echo htmlspecialchars($json_data->prenom);
                 ?>
                 </h4>
                 <h4>
                 <?php
-                    echo $json_data->nom;
+                    echo htmlspecialchars($json_data->nom);
                 ?>
                 </h4>
             </div>
             <img 
             <?php
                 if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
-                    echo 'src="promo/' . $u . '/' . $json_data->avatar.'"';
+                    echo 'src="promo/' . $u . '/' . htmlspecialchars($json_data->avatar) . '"';
                 } else {
                     echo 'src="img/avatar.png" ';
                 }
