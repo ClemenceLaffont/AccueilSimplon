@@ -59,7 +59,7 @@
             <img 
             <?php
                 if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
-                    echo 'src="../' . $u . '/' . $json_data->avatar.'"';
+                    echo 'src="promo/' . $u . '/' . $json_data->avatar.'"';
                 } else {
                     echo 'src="img/avatar.png" ';
                 }
