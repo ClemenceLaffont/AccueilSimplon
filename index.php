@@ -39,13 +39,13 @@
     <main>
         <?php
             foreach ($users as $u) {
-                if (file_exists("./promo/$u/conf.json")) {
+                if (file_exists("../$u/conf.json")) {
         ?>
-        <a href="./promo/<?php echo $u; ?>">
+        <a href="promo/<?php echo $u; ?>">
             <div>
                 <h4>
                 <?php 
-                    $json_source = file_get_contents("./promo/$u/conf.json");
+                    $json_source = file_get_contents("../$u/conf.json");
                     $json_data = json_decode($json_source);
                     echo $json_data->prenom;
                 ?>
@@ -58,8 +58,8 @@
             </div>
             <img 
             <?php
-                if ($json_data->avatar != "") {
-                    echo 'src="./promo/'.$u.'/'.$json_data->avatar.'" ';
+                if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
+                    echo 'src="../' . $u . '/' . $json_data->avatar.'"';
                 } else {
                     echo 'src="img/avatar.png" ';
                 }
