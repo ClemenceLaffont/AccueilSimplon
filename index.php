@@ -1,11 +1,11 @@
 <?php
-    $users = scandir(".");
+    $users = scandir("..");
     if ($users === false) {
         header('content-type: text/plain');
         echo 'Oops, une erreur est survenu !';
         exit(1);
     }
-    $users = array_diff($users, ['.', '..', 'lost+found', 'index.php', 'img', 'css', '.git', 'README.md', 'LICENSE'])
+    $users = array_diff($users, ['.', '..', 'lost+found', 'index.php', 'img', 'css', '.git', 'README.md', 'LICENSE', 'AccueilSimplon'])
 ?>
 
 <!DOCTYPE html>
@@ -39,13 +39,13 @@
     <main>
         <?php
             foreach ($users as $u) {
-                if (file_exists("$u/conf.json")) {
+                if (file_exists("./promo/$u/conf.json")) {
         ?>
-        <a href="./<?php echo $u; ?>">
+        <a href="./promo/<?php echo $u; ?>">
             <div>
                 <h4>
                 <?php 
-                    $json_source = file_get_contents("$u/conf.json");
+                    $json_source = file_get_contents("./promo/$u/conf.json");
                     $json_data = json_decode($json_source);
                     echo $json_data->prenom;
                 ?>
@@ -59,7 +59,7 @@
             <img 
             <?php
                 if ($json_data->avatar != "") {
-                    echo 'src="'.$u.'/'.$json_data->avatar.'" ';
+                    echo 'src="./promo/'.$u.'/'.$json_data->avatar.'" ';
                 } else {
                     echo 'src="img/avatar.png" ';
                 }
@@ -69,7 +69,7 @@
         <?php 
             } else {
         ?>
-        <a href="./<?php echo $u; ?>">
+        <a href="./promo/<?php echo $u; ?>">
             <div>
                 <h4>
                 <?php 
