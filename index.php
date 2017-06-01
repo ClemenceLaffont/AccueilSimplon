@@ -5,7 +5,7 @@
         echo 'Oops, une erreur est survenu !';
         exit(1);
     }
-    $users = array_diff($users, ['.', '..', 'lost+found', 'index.php'])
+    $users = array_diff($users, ['.', '..', 'lost+found', 'index.php', 'img', 'css', '.git', 'README.md', 'LICENSE'])
 ?>
 
 <!DOCTYPE html>
@@ -58,8 +58,11 @@
             </div>
             <img 
             <?php
+                if ($json_data->avatar != "") {
                     echo 'src="'.$u.'/'.$json_data->avatar.'" ';
-                        
+                } else {
+                    echo 'src="img/avatar.png" ';
+                }
             ?>
             alt="avatar de l'apprenant" />
         </a>
