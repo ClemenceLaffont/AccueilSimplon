@@ -38,53 +38,52 @@
     </header>
     <main>
         <?php
-            foreach ($users as $u) {
-                if ($u[0] != '.') {
-                if (file_exists("../$u/conf.json")) {
-        ?>
-        <a href="promo/<?php echo $u; ?>">
-            <div>
-                <h4>
+        foreach ($users as $u) {
+            if ($u[0] != '.') {
+                if (file_exists("../$u/conf.json")) { ?>
+                    <a href="promo/<?php echo $u; ?>">
+                        <div>
+                            <h4>
+                            <?php 
+                                $json_source = file_get_contents("../$u/conf.json");
+                                $json_data = json_decode($json_source);
+                                echo htmlspecialchars($json_data->prenom);
+                            ?>
+                            </h4>
+                            <h4>
+                            <?php
+                                echo htmlspecialchars($json_data->nom);
+                            ?>
+                            </h4>
+                        </div>
+                        <img 
+                        <?php
+                            if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
+                                echo 'src="promo/' . $u . '/' . htmlspecialchars($json_data->avatar) . '"';
+                            } else {
+                                echo 'src="img/avatar.png" ';
+                            }
+                        ?>
+                        alt="avatar de l'apprenant" />
+                    </a>
+                    <?php 
+                        } else {
+                    ?>
+                    <a href="./promo/<?php echo $u; ?>">
+                        <div>
+                            <h4>
+                            <?php 
+                                echo $u;
+                            ?>
+                            </h4>
+                            <h4>&nbsp;</h4>
+                        </div>
+                        <img src="img/avatar.png" alt="avatar de l'apprenant" />
+                    </a>
                 <?php 
-                    $json_source = file_get_contents("../$u/conf.json");
-                    $json_data = json_decode($json_source);
-                    echo htmlspecialchars($json_data->prenom);
-                ?>
-                </h4>
-                <h4>
-                <?php
-                    echo htmlspecialchars($json_data->nom);
-                ?>
-                </h4>
-            </div>
-            <img 
-            <?php
-                if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
-                    echo 'src="promo/' . $u . '/' . htmlspecialchars($json_data->avatar) . '"';
-                } else {
-                    echo 'src="img/avatar.png" ';
                 }
-            ?>
-            alt="avatar de l'apprenant" />
-        </a>
-        <?php 
-            } else {
-        ?>
-        <a href="./promo/<?php echo $u; ?>">
-            <div>
-                <h4>
-                <?php 
-                    echo $u;
-                ?>
-                </h4>
-                <h4>&nbsp;</h4>
-            </div>
-            <img src="img/avatar.png" alt="avatar de l'apprenant" />
-        </a>
-        <?php 
-            }
-        } 
-            }
+            } 
+        }
         ?>
     </main>
     <footer>
