@@ -5,7 +5,7 @@
         echo 'Oops, une erreur est survenu !';
         exit(1);
     }
-    $users = array_diff($users, ['.', '..', 'lost+found', 'index.php', 'img', 'css', '.git', 'README.md', 'LICENSE', 'AccueilSimplon'])
+    $users = array_diff($users, ['lost+found', 'index.php', 'img', 'css', 'README.md', 'LICENSE', 'AccueilSimplon']);
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +39,7 @@
     <main>
         <?php
             foreach ($users as $u) {
+                if ($u[0] != '.') {
                 if (file_exists("../$u/conf.json")) {
         ?>
         <a href="promo/<?php echo $u; ?>">
@@ -83,6 +84,7 @@
         <?php 
             }
         } 
+            }
         ?>
     </main>
     <footer>
