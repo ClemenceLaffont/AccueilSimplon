@@ -42,8 +42,10 @@
         foreach ($users as $u) {
             if ($u[0] != '.') {
                 echo '<li>';
-                if (file_exists("../$u/conf.json")) { ?>
-                
+                if (file_exists("../$u/conf.json")) { 
+                    $json_source = file_get_contents("../$u/conf.json");
+                    $json_data = json_decode($json_source);
+                    ?>
                     <a href="promo/<?php echo $u; ?>">
                         <div>
                         <?php if($json_data->nom != '') { ?>
@@ -60,10 +62,8 @@
                             ?>
                             </h4>
                         <?php } elseif($json_data->nom == '' || !isset($json_data->nom)) { ?>
-                            <h4 style:'margin-bot: 24.8px;'>
-                            <?php 
-                                $json_source = file_get_contents("../$u/conf.json");
-                                $json_data = json_decode($json_source);
+                            <h4 style="margin-bottom: 24.8px;">
+                            <?php
                                 echo htmlspecialchars($json_data->prenom);
                             ?>
                             </h4>
@@ -73,18 +73,18 @@
                         <?php
                             if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
                                 echo 'src="promo/' . $u . '/' . htmlspecialchars($json_data->avatar) . '"';
+                                echo 'alt="avatar personnalisé de l\'apprenant '.htmlspecialchars($json_data->prenom).' '.htmlspecialchars($json_data->nom).'"';
                             } else {
                                 echo 'src="img/avatar.png" ';
                             }
                         ?>
-                        alt="avatar personnalisé de l'apprenant<?php echo htmlspecialchars($json_data->prenom).' '.htmlspecialchars($json_data->nom); ?>" />
                     </a>
                     <?php 
                         } else {
                     ?>
                     <a href="./promo/<?php echo $u; ?>">
                         <div>
-                            <h4 style:'margin-bot: 24.8px;'>
+                            <h4 style="margin-bottom: 24.8px;">
                             <?php 
                                 echo $u;
                             ?>
