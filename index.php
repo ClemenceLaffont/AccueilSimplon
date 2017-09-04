@@ -44,8 +44,8 @@
                 if (file_exists("../$u/conf.json")) { 
                     $json_source = file_get_contents("../$u/conf.json");
                     $json_data = json_decode($json_source);
-                    echo '<li>';
                     ?>
+                    <li>
                     <a href="promo/<?php echo $u; ?>">
                         <div>
                         <?php if($json_data->nom != '') { ?>
@@ -79,9 +79,11 @@
                             }
                         ?>
                     </a>
+                    </li>
                     <?php 
                         } else {
                     ?>
+                    <li>
                     <a href="./promo/<?php echo $u; ?>">
                         <div>
                             <h4 style="margin-bottom: 24.8px;">
@@ -92,9 +94,9 @@
                         </div>
                         <img src="img/avatar.png"/>
                     </a>
+                    </li>
                 <?php 
                 }
-                echo '</li>';
             } 
         }
         ?>
