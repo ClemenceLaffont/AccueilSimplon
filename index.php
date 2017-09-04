@@ -55,8 +55,7 @@
                                 $json_data = json_decode($json_source);
                                 echo htmlspecialchars($json_data->prenom);
                             ?>
-                            </h4>
-                            <h4>
+                            </br>
                             <?php
                                 echo htmlspecialchars($json_data->nom);
                             ?>
@@ -77,7 +76,7 @@
                             } else {
                                 echo 'src="img/avatar.png" ';
                             }
-                        ?>
+                        ?>/>
                     </a>
                     </li>
                     <?php 
