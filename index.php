@@ -1,5 +1,5 @@
 <?php
-    $users = scandir("..");
+    $users = scandir("promo3");
     if ($users === false) {
         header('content-type: text/plain');
         echo 'Oops, une erreur est survenu !';
