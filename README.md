@@ -2,7 +2,7 @@
 Création d'un design sympathique pour la page de garde du serveur web commun a la classe !
 
 Pour personnaliser le lien vers votre partie du serveur il faut :
-1) aller dans /var/www/monPrenom
+1) aller dans ~/www/
 2) creer un fichier conf.json
 3) ecrire ceci a l'interieur en modifiant ce qu'il faut modifier :
 ```json
