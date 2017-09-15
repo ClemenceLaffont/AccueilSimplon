@@ -48,7 +48,12 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+<<<<<<< HEAD
     width: 100%;
+=======
+    padding: 10px 30px;
+    width: 90%;
+>>>>>>> 39dad03163de4f3e57b2f07857f044d26accc316
 }
 
 main a {
