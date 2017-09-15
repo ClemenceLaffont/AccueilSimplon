@@ -41,8 +41,8 @@
         <?php
         foreach ($users as $u) {
             if ($u[0] != '.') {
-                if (file_exists("../$u/conf.json")) { 
-                    $json_source = file_get_contents("../$u/conf.json");
+                if (file_exists("promo3/$u/conf.json")) { 
+                    $json_source = file_get_contents("promo3/$u/conf.json");
                     $json_data = json_decode($json_source);
                     ?>
                     <li>
@@ -51,7 +51,7 @@
                         <?php if($json_data->nom != '') { ?>
                             <h4>
                             <?php 
-                                $json_source = file_get_contents("../$u/conf.json");
+                                $json_source = file_get_contents("promo3/$u/conf.json");
                                 $json_data = json_decode($json_source);
                                 echo htmlspecialchars($json_data->prenom);
                             ?>
@@ -83,7 +83,7 @@
                         } else {
                     ?>
                     <li>
-                    <a href="./promo/<?php echo $u; ?>">
+                    <a href="./promo3/<?php echo $u; ?>">
                         <div>
                             <h4 style="margin-bottom: 24.8px;">
                             <?php 
