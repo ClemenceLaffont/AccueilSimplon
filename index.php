@@ -46,7 +46,7 @@
                     $json_data = json_decode($json_source);
                     ?>
                     <li>
-                    <a href="promo/<?php echo $u; ?>">
+                    <a href="promo3/<?php echo $u; ?>">
                         <div>
                         <?php if($json_data->nom != '') { ?>
                             <h4>
@@ -71,7 +71,7 @@
                         <img 
                         <?php
                             if ($json_data->avatar != "" && is_file("../$u/$json_data->avatar")) {
-                                echo 'src="promo/' . $u . '/' . htmlspecialchars($json_data->avatar) . '"';
+                                echo 'src="promo3/' . $u . '/' . htmlspecialchars($json_data->avatar) . '"';
                                 echo 'alt="avatar personnalisé de l\'apprenant '.htmlspecialchars($json_data->prenom).' '.htmlspecialchars($json_data->nom).'"';
                             } else {
                                 echo 'src="img/avatar.png" ';
