@@ -1,113 +1,122 @@
 body {
-    display: flex;
-    flex-direction: column;
-    color: #666666;
-    font-family: "Open Sans", Arial, sans-serif;
-    margin: 0px;
-}
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0px; }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo {
-    min-width: 300px;
-    max-width: 500px;
-    width: 80%;
-}
-
-header section {
-    background: lightgrey;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 10px 0px;
-}
-
-header section div {
-    margin: 20px;
-    text-align: center;
-}
-
-#slogant {
-    color: #fc0045;
-    font-size: 1em;
-    margin: 0px;
-}
-
-h3 {
-    text-align: center;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-<<<<<<< HEAD
-    width: 100%;
-=======
-    padding: 10px 30px;
-    width: 90%;
->>>>>>> 39dad03163de4f3e57b2f07857f044d26accc316
-}
-
-main a {
-    width: 200px;
-    height: 300px;
-    margin: 20px;
-    border-top: 3px solid #ed1450;
-    box-shadow: 0px 0px 7px #eeeeee;
-    transition: 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    color: #666666;
-    overflow: hidden;
-}
-
-main a:hover {
-    box-shadow: 1px 1px 10px #cccccc;
-    width: 204px;
-    margin: 18px;
-}
-
-h4 {
-    margin: 0px;
-    font-size: 1.3em;
-}
-
-main a div {
-    width: 200px;
-}
-
-main a img {
-    max-width: 200px;
-    max-height: 250px;
-    margin: auto;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-}
-
-footer img {
-    max-width: 100px;
-    max-height: 100px;
-    width: 15%;
-    height: 100%;
-    margin: 10px;
-}
-
-li {
+#liste-apprenant {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #liste-apprenant li {
     list-style: none;
     padding: 0px;
     margin: 0px;
-}
+    width: 260px; }
+    #liste-apprenant li a {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      margin: 20px;
+      border-top: 3px solid #fc0045;
+      box-shadow: 0px 0px 7px #e0e0e0;
+      transition: 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      text-decoration: none;
+      color: #666;
+      overflow: hidden; }
+      #liste-apprenant li a:hover {
+        box-shadow: 1px 1px 10px #666;
+        width: 204px;
+        margin: 18px; }
+      #liste-apprenant li a h4 {
+        margin: 0px;
+        font-size: 1.3em; }
+      #liste-apprenant li a p {
+        margin: 3px 0px 0px 0px;
+        font-size: 0.8em; }
+      #liste-apprenant li a img {
+        max-width: 200px;
+        max-height: 250px;
+        margin: auto; }
+      #liste-apprenant li a div {
+        width: 200px; }
+
+.emboche {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 220px !important;
+  height: 320px;
+  background-color: #333;
+  opacity: 0.8;
+  transition: 0.3s ease;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .emboche:hover {
+    width: 224px !important; }
+
+header {
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  header img {
+    height: 70px; }
+  header ul {
+    display: flex; }
+    header ul li {
+      margin: 0px;
+      list-style: none; }
+      header ul li a {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+        text-decoration: none;
+        color: #666;
+        position: relative;
+        transition: 0.3s ease; }
+        header ul li a::before {
+          display: block;
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 30px;
+          border-bottom: 2px solid #666;
+          border-top: 2px solid #666;
+          transition: 0.2s ease; }
+        header ul li a:hover, header ul li a:focus {
+          color: #333; }
+          header ul li a:hover::before, header ul li a:focus::before {
+            width: 140px;
+            border-bottom: 2px solid #333;
+            border-top: 2px solid #333; }
+    header ul li:last-child a {
+      border: none; }
+
+.en-tete {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .en-tete h2 {
+    font-size: 2em;
+    margin: 10px; }
+  .en-tete p {
+    padding: 0px 5px;
+    border-left: 2px solid #666; }
+
+/*# sourceMappingURL=style.css.map */
