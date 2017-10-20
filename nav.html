@@ -1,17 +1,24 @@
 <body>
 <header>
-    <a href="index.php"><img src="img/logo-simplonlyon.jpg" /></a>
+    <div>
+        <h1><a href="index.php" title="Page d'accueil"><img src="img/logo-simplonlyon.jpg" alt="logo de Simplon Lyon"/></a></h1>
+        <svg id="deroulant" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><title>122all</title><rect x="16.56" y="45" width="66.88" height="10"/><rect x="16.56" y="21.92" width="66.88" height="10"/><rect x="16.56" y="68.08" width="66.88" height="10"/></svg>
+    </div>
     <nav>
         <ul>
             <li>
-                <a href="catalogue.php">Portfolios</a>
+                <a href="index.php" <?php if($page=="index"){echo 'class="page-active"';} ?>>Accueil</a>
             </li>
             <li>
-                <a href="programme.php">Programme</a>
+                <a href="catalogue.php" <?php if($page=="catalogue"){echo 'class="page-active"';} ?>>Portfolios</a>
             </li>
             <li>
-                <a href="contact.php">Contact</a>
+                <a href="programme.php" <?php if($page=="programme"){echo 'class="page-active"';} ?>>Programme</a>
+            </li>
+            <li>
+                <a href="contact.php" <?php if($page=="contact"){echo 'class="page-active"';} ?>>Contact</a>
             </li>
         </ul>
     </nav>
+    <script type="text/javascript" src="js/menuMobile.js"></script>
 </header>

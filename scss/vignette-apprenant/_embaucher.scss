@@ -1,0 +1,19 @@
+.emboche {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 220px!important;
+    height: 320px;
+    background-color: $black;
+    opacity: 0.8;
+    transition: 0.3s ease;
+    color: $lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:hover {
+        width: 224px!important;
+    }
+}

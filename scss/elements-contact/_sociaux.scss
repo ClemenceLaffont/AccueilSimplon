@@ -1,0 +1,14 @@
+.sociaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        margin: 10px;
+        padding: 10px;
+        color: $darkgrey;
+        transition: 0.3s ease;
+        &:hover, &:focus {
+            color: $fuchsia;
+        }
+    }
+}

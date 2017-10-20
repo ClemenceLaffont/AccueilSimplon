@@ -1,11 +1,12 @@
 <?php
+$page = "catalogue";
 include_once('head.html');
 include_once('nav.html');
 ?>
 <main>
     <section class="en-tete">
-        <h2>Portfolio</h2>
-        <p>Ci-dessous les portfolios des apprenants de la promo3 de Simplon Villeurbanne qui termineront leurs formation le 10 Novembre 2017. Cliquez sur leurs vignettes pour accéder à leurs portfolios</p>
+        <h2>Portfolios</h2>
+        <p>Ci-dessous les portfolios des apprenant.e.s de la promo3 de Simplon Villeurbanne qui termineront leurs formation le 10 Novembre 2017. Cliquez sur leur vignette pour accéder à leur portfolio</p>
     </section>
 
     <ul id="liste-apprenant">
@@ -23,10 +24,10 @@ include_once('nav.html');
         }
 
         // Malheueusement, dans le dossier il n'y a pas QUE des dossiers personnels d'apprenant ! si un intru apparait dans la liste mettez son nom en dessous et il sera enlevé du tableau d'appenant
-        $users = array_diff($users, ['lost+found', 'index.php', 'img', 'css', 'README.md', 'LICENSE', 'AccueilSimplon', 'html']);
+        $users = array_diff($users, ['lost+found', 'index.php', 'img', 'css', 'README.md', 'LICENSE', 'AccueilSimplon', 'html', 'jdemel', 'larod']);
 
         // OPTIONNEL : Par défaut, les apprenants apparaissent par ordre alphabetique ! la ligne juste en dessous permet un affichage aleatoire
-        //shuffle($users);
+        shuffle($users);
 
         foreach ($users as $u) {
             if ($u[0] != '.') {
@@ -55,7 +56,7 @@ include_once('nav.html');
                             ?>
                             </h4>
                         <?php } elseif($json_data->nom == '' || !isset($json_data->nom)) { ?>
-                            <h4 style="margin-bottom: 24.8px;">
+                            <h4>
                             <?php
                                 echo htmlspecialchars($json_data->prenom);
                             ?>
@@ -86,7 +87,7 @@ include_once('nav.html');
                     <li>
                     <a href="./<?php echo $route.'/'.$u; ?>">
                         <div>
-                            <h4 style="margin-bottom: 24.8px;">
+                            <h4>
                             <?php 
                                 echo $u;
                             ?>
@@ -102,5 +103,6 @@ include_once('nav.html');
         ?>
     </ul>
 </main>
-</body>
-</html>
+<?php
+include_once('footer.html');
+?>

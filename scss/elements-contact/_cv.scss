@@ -1,0 +1,24 @@
+.cv-personnel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 4%;
+    @include bordergrey;
+    img {
+        margin: 5%;
+        height: 120px;
+    }
+    div {
+        flex-grow: 1;
+        h3 {
+            color: $fuchsia;
+            font-size: 1.2em;
+            margin: 10px 0px;
+        }
+        p {
+            margin: 5px 0px;
+        }
+    }
+}

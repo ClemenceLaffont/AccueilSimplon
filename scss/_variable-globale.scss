@@ -1,0 +1,20 @@
+$fuchsia: #fc0045;
+$lightgrey: #e0e0e0;
+$darkgrey: #666;
+$black: #333;
+
+@mixin bordergrey {
+    border: 2px solid $lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@mixin shadow {
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px $black;
+    box-shadow: 2px 2px 2px $black;
+    transition: box-shadow 0.25s;
+    &:hover, &:focus {
+        box-shadow: 4px 4px 20px $black;
+    }
+}
