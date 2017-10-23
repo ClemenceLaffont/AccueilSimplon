@@ -13,7 +13,7 @@ include_once('nav.html');
         <?php
 
         // Mise en place de la route qui mene au dossier contenant tout les dossiers personnels des apprenants
-        $route = "promo3";
+        $route = "../promo3";
 
         // Création et remplissage du tableau qui contiendra tout les apprenants
         $users = scandir($route);
