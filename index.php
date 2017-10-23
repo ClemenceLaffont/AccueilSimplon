@@ -11,7 +11,7 @@ include_once('nav.html');
         </section>
         <h2>Recrutez un.e développeur.euse </br><span>motivé.e</span></h2>
         <a id="catch" href="catalogue.php">Voir les portfolios !</a>
-        <p>Les apprenant.e.s de Simplon sont sélectionné.e.s avec soin sur le critère de leur motivation et de leurs capacités à apprendre et travailler en équipe. Sur 120 candidatures, voici les 24 meilleurs ! (pauline) </p>
+        <p>Les apprenant.e.s de Simplon sont sélectionné.e.s avec soin sur le critère de leur motivation et de leurs capacités à apprendre et travailler en équipe. Sur 120 candidatures, voici les 24 meilleurs !</p>
         <h3>Voir aussi :</h3>
         <section id="boutons">
             <a href="programme.php">Programme de la formation</a>
