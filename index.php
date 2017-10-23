@@ -10,7 +10,7 @@ include_once('nav.html');
             <p><img src="img/illustration.png"/>Simplon : Fabrique de développeur.euse.s sociale et solidaire</p>
         </section>
         <h2>Recrutez un.e développeur.euse </br><span>motivé.e</span></h2>
-        <a href="catalogue.php">Voir les portfolios !</a>
+        <a id="catch" href="catalogue.php">Voir les portfolios !</a>
         <p>Les apprenant.e.s de Simplon sont sélectionné.e.s avec soin sur le critère de leur motivation et de leurs capacités à apprendre et travailler en équipe. Sur 120 candidatures, voici les 24 meilleurs ! (pauline) </p>
         <h3>Voir aussi :</h3>
         <section id="boutons">
@@ -32,6 +32,7 @@ include_once('nav.html');
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </section>
+        <p id="message">Il n'y a pas de pub ici, vous pouvez désactiver AdBlock pour voir les tweet !</p>
     </main>
 
 <?php
