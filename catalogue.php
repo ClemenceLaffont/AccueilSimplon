@@ -2,18 +2,26 @@
 $page = "catalogue";
 include_once('head.html');
 include_once('nav.html');
+//Récupération du numéro de la page avec un paramètre GET dans l'Url
+$promo_nbr = $_GET['page'];
 ?>
 <main>
     <section class="en-tete">
         <h2>Portfolios</h2>
-        <p>Ci-dessous les portfolios des apprenant.e.s de la promo3 de Simplon Villeurbanne qui termineront leurs formation le 10 Novembre 2017. Cliquez sur leur vignette pour accéder à leur portfolio</p>
+        <p>Ci-dessous les portfolios des apprenant.e.s de la promo3 de Simplon Villeurbanne qui termineront leurs formation le 10 Novembre 2017, ainsi que de ceux de la promo 4 de Simplon Vénissieux qui termineront leurs formation le 22 Juin 2018. Cliquez sur leur vignette pour accéder à leur portfolio </p>
     </section>
 
     <ul id="liste-apprenant">
         <?php
 
+        //Check si le paramètre passé en GET dans l'url n'est pas un string ou alors que la personne essaye d'accéder à une page non crée
+        if(is_numeric($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5){
+            header('Location: ./catalogue.php?page=2');
+        };
+
+
         // Mise en place de la route qui mene au dossier contenant tout les dossiers personnels des apprenants
-        $route = "../promo3";
+        $route = "../promo$promo_nbr";
 
         // Création et remplissage du tableau qui contiendra tout les apprenants
         $users = scandir($route);
