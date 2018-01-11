@@ -1,0 +1,20 @@
+.sub_menu{
+    display: none;
+}
+
+li:hover .sub_menu{
+    display: inline;
+    position: absolute;
+}
+
+.sub_menu li{
+    font-size: 12px;
+}
+.sub_menu li a{
+    margin: auto;
+    background: white;
+}
+
+.nav{
+    z-index: 10000;
+}

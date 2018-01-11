@@ -6,7 +6,8 @@ include_once('nav.html');
 <main>
     <section class="en-tete">
         <h2>Contact</h2>
-        <p>Pour plus de renseignements, n'hésitez pas à contacter Pauline, notre chargée de promo, ou à lui rendre visite directement à Simplon Villeurbanne du lundi au vendredi de 9h à 12h30 et de 13h30 à 18h.</p>
+        <!-- Modif de la phrase d'accroche et rajout de Ingrid -->
+        <p>Pour plus de renseignements, n'hésitez pas à contacter Pauline ou Ingrid, chargée de promo, ou à leur rendre visite directement sur les sites  Simplon Villeurbanne ou Simplon Vénissieux du lundi au vendredi de 9h à 12h30 et de 13h30 à 18h.</p>
     </section>
     <div id="contact">
         <section id="coordonee">
@@ -33,6 +34,15 @@ include_once('nav.html');
                         <p>Chargée de promotion</p>
                         <p>06 64 46 73 88</p>
                         <p><a href="mailto:prouillet@simplon.co">prouillet@simplon.co</a></p>
+                    </div>
+                </section>
+                <section class="cv-personnel">
+                    <img src="img/ingrid.png" alt="Photo de Ingrid Genet"/>
+                    <div>
+                        <h3>Ingrid GENET</h3>
+                        <p>Chargée de promotion</p>
+                        <p>06 59 59 60 05</p>
+                        <p><a href="mailto:igenet@simplon.co">igenet@simplon.co</a></p>
                     </div>
                 </section>
                 <section class="cv-personnel">

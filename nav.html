@@ -1,5 +1,5 @@
 <body>
-<header>
+<header class="nav">
     <div>
         <h1><a href="index.php" title="Page d'accueil"><img src="img/logo-simplonlyon.jpg" alt="logo de Simplon Lyon"/></a></h1>
         <svg id="deroulant" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><title>122all</title><rect x="16.56" y="45" width="66.88" height="10"/><rect x="16.56" y="21.92" width="66.88" height="10"/><rect x="16.56" y="68.08" width="66.88" height="10"/></svg>
@@ -11,6 +11,12 @@
             </li>
             <li>
                 <a href="catalogue.php" <?php if($page=="catalogue"){echo 'class="page-active"';} ?>>Portfolios</a>
+                <ul class="sub_menu">
+                    <li><a href="catalogue.php?page=2">Promo 2</li></a>
+                    <li><a href="catalogue.php?page=3">Promo 3</li></a>
+                    <li><a href="catalogue.php?page=4">Promo 4</li></a>
+                    <li><a href="catalogue.php?page=5">Promo 5</li></a>
+                </ul>
             </li>
             <li>
                 <a href="programme.php" <?php if($page=="programme"){echo 'class="page-active"';} ?>>Programme</a>
