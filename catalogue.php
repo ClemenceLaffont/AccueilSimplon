@@ -3,7 +3,7 @@ $page = "catalogue";
 include_once('head.html');
 include_once('nav.html');
 //Récupération du numéro de la page avec un paramètre GET dans l'Url
-$promo_nbr = $_GET['page'];
+$promo_nbr = $_GET['promo'];
 ?>
 <main>
     <section class="en-tete">
@@ -16,7 +16,7 @@ $promo_nbr = $_GET['page'];
 
         //Check si le paramètre passé en GET dans l'url n'est pas un string ou alors que la personne essaye d'accéder à une page non crée
         if(is_numeric($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5){
-            header('Location: ./catalogue.php?page=2');
+            header('Location: ./catalogue.php?promo=4');
         };
 
 
