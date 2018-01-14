@@ -2,23 +2,35 @@
 $page = "catalogue";
 include_once('head.html');
 include_once('nav.html');
-//Récupération du numéro de la page avec un paramètre GET dans l'Url
-$promo_nbr = $_GET['promo'];
+
+// Récupération du numéro de la page avec un paramètre GET dans l'Url
+// Affichage de la Promo 4 par défaut (a changer au fil des années)
+if (isset($_GET['promo'])) {
+    $promo_nbr = $_GET['promo'];
+} else {
+    $promo_nbr = 4;
+}
+// Check si le paramètre passé en GET dans l'url n'est pas un string ou alors que la personne essaye d'accéder à une page non crée
+if(is_numeric($promo_nbr) == false || is_int($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5) {
+    $promo_nbr = 4;
+}
+
 ?>
 <main>
     <section class="en-tete">
         <h2>Portfolios</h2>
-        <p>Ci-dessous les portfolios des apprenant.e.s de la promo3 de Simplon Villeurbanne qui termineront leurs formation le 10 Novembre 2017, ainsi que de ceux de la promo 4 de Simplon Vénissieux qui termineront leurs formation le 22 Juin 2018. Cliquez sur leur vignette pour accéder à leur portfolio </p>
+        <p>Ci-dessous les portfolios des apprenant.e.s de Simplon Villeurbanne et Vénissieux trier par promo. Cliquez sur leur vignette pour accéder à leur portfolio.</p>
     </section>
+
+    <nav id="nav-promo">
+        <a href="catalogue.php?promo=2" <?php if($promo_nbr == 2) { echo 'class="promo-active"'; } ?>>Promo 2</a>
+        <a href="catalogue.php?promo=3" <?php if($promo_nbr == 3) { echo 'class="promo-active"'; } ?>>Promo 3</a>
+        <a href="catalogue.php?promo=4" <?php if($promo_nbr == 4) { echo 'class="promo-active"'; } ?>>Promo 4</a>
+        <a href="catalogue.php?promo=5" <?php if($promo_nbr == 5) { echo 'class="promo-active"'; } ?>>Promo 5</a>
+    </nav>
 
     <ul id="liste-apprenant">
         <?php
-
-        //Check si le paramètre passé en GET dans l'url n'est pas un string ou alors que la personne essaye d'accéder à une page non crée
-        if(is_numeric($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5){
-            header('Location: ./catalogue.php?promo=4');
-        };
-
 
         // Mise en place de la route qui mene au dossier contenant tout les dossiers personnels des apprenants
         $route = "../promo$promo_nbr";

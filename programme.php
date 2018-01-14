@@ -6,8 +6,9 @@ include_once('nav.html');
 <main>
     <section class="en-tete">
         <h2>Programme</h2>
-        <p>Ci-dessous le programme qui a été appliqué durant la formation des apprenant.e.s de la promo 3 de Simplon Villeurbanne. Les méthodes d'apprentissage sont surtout centrées sur la pratique et l'entraide. Un.e formateur.trice, issu.e du monde professionnel, est présent.e tout au long de la journée pour apporter des éléments théoriques et répondre aux questions des apprenants.</p>
+        <p>Ci-dessous les programmes qui ont été appliqué durant les formations des apprenant.e.s de Simplon Villeurbanne et Venissieux. Les méthodes d'apprentissage sont surtout centrées sur la pratique et l'entraide. Un.e formateur.trice, issu.e du monde professionnel, est présent.e tout au long de la journée pour apporter des éléments théoriques et répondre aux questions des apprenants.</p>
     </section>
+
     <section id="programme">
         <section id="intro">
             <h3>Prairie/Introduction</h3>

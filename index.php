@@ -11,10 +11,10 @@ include_once('nav.html');
         <h2>Recrutez un.e développeur.euse </br><span>motivé.e</span></h2>
         <!-- Le bouton voir Portfolio envoie désormais pas défaut sur la page de la promo 2-->
         <a id="catch" href="catalogue.php?promo=4">Voir les portfolios !</a>
-        <p>Les apprenant.e.s de Simplon sont sélectionné.e.s avec soin sur le critère de leur motivation et de leurs capacités à apprendre et travailler en équipe. Sur 120 candidatures, voici les 24 meilleurs !</p>
+        <p>Les apprenant.e.s de Simplon sont sélectionné.e.s avec soin sur le critère de leur motivation et de leurs capacités à apprendre et travailler en équipe. Leurs implication et compétences sont garanties par la maison !</p>
         <h3>Voir aussi :</h3>
         <section id="boutons">
-            <a href="programme.php">Programme de la formation</a>
+            <a href="programme.php">Programme des formations</a>
             <a href="contact.php">Plus d'infos & Contact</a>
         </section>
         <h2>Quoi de neuf ?</h2>
