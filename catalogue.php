@@ -11,7 +11,7 @@ if (isset($_GET['promo'])) {
     $promo_nbr = 4;
 }
 // Check si le paramètre passé en GET dans l'url n'est pas un string ou alors que la personne essaye d'accéder à une page non crée
-if(is_numeric($promo_nbr) == false || is_int($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5) {
+if(is_numeric($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5) {
     $promo_nbr = 4;
 }
 
