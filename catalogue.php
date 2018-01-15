@@ -14,7 +14,7 @@ if (isset($_GET['promo'])) {
 if(is_numeric($promo_nbr) == false || $promo_nbr < 2 || $promo_nbr > 5) {
     $promo_nbr = 4;
 }
-
+$promo_nbr = round($promo_nbr);
 ?>
 <main>
     <section class="en-tete">
